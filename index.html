@@ -1,1 +1,138 @@
-Hello word
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Password Strength Validator</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<!-- password_strength -->
+<script type="text/javascript" src="../password_strength_meter_widget/widget_strength_meter.js"></script>
+<link rel="stylesheet" type="text/css" href="../password_strength_meter_widget/widget_strength_meter.css">
+
+<style>
+body{
+	background-color: #cbcbcb;
+	text-align: center;
+}
+
+.header{
+	margin-top: 50px;
+	font-size: 23px;
+}
+
+
+/* custom styles for second password strength */
+.c_strength_input{
+	width: 250px;
+	font-size: 35px;
+	background: transparent;
+	border-radius: 15px;
+}
+
+.c_strength_meter {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+.c_button_strength {
+	text-decoration: none;
+	color: #4d4d4d;
+	font-size: 16px;
+	display: block;
+	font-weight: bold;
+}
+
+.c_strength_meter div {
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+	overflow: hidden;
+	border-radius: 19px;
+	height: 45px;
+	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.c_strength_meter div p {
+    position: absolute;
+    right: 10px;
+    color: #4d4d4d;
+    font-size: 13px;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+/* custom styles for third password strength */
+.t_strength_meter {
+    position: absolute;
+  	height: 18px;
+  	bottom: -2px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.t_strength_meter div {
+    width: 0%;
+    height: 34px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.t_strength_meter div p {
+	position: absolute;
+	right: 10px;
+	color: #4d4d4d;
+	margin: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+</style>
+
+<script>
+    $(document).ready(function($) { 
+        $('#myPassword').strength_meter();
+        var x =  $('#mySecondPassword').strength_meter({
+            inputClass: 'c_strength_input',
+            strengthMeterClass: 'c_strength_meter',
+            toggleButtonClass: 'c_button_strength'
+        });
+
+        $("#myThirdPassword").strength_meter({
+            strengthMeterClass: 't_strength_meter'
+        });
+
+        $('#destroy').click(function(){ 
+        	x.strength_meter('destroy');
+        	$(this).hide();
+        });
+    });
+</script>
+
+</head>
+
+<body>
+	<p class='header'>Password <strong>Strength</strong></p>
+	<div id="myPassword"></div>
+
+	<p class='header'>Another Sample</p>
+	<div id="mySecondPassword"></div>
+	<br/>
+	<button id="destroy">Destroy second</button>
+
+	<p class='header'>Third Sample</p>
+	<div id="myThirdPassword"></div>
+</body>
+</html>
