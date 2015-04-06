@@ -21,7 +21,7 @@
                 options = this.options,
                 id = this.element[0].id;
 
-            //Note. Instead of this you can use templating . I did not want to have addition dependencies.
+            //Note. Instead of this you can use templating. I did not want to have addition dependencies.
             this.element.addClass(options.strengthWrapperClass);
             this.element.append('<input type="password" class="' + options.inputClass + '" "/>');
             this.element.append('<input type="text" class="' + options.inputClass + '" style="display:none"/>');
