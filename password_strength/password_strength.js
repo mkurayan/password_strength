@@ -1,3 +1,11 @@
+/* 
+This plugin use jQuery Widget Factory because such approach allows to build complex, stateful plugins based on object-oriented principles.
+If you prefer a lightweight implementation which not use Widget Factory and not depend from jQuery UI you can use password_strength_lightweight.js
+
+Dependencies: 
+1. jQuery
+2. jQuery UI 
+*/
 ;(function ( $, window, document, undefined ) {
     var upperCase = new RegExp('[A-Z]');
     var lowerCase = new RegExp('[a-z]');
@@ -18,8 +26,7 @@
 
         _create: function () {
             var 
-                options = this.options,
-                id = this.element[0].id;
+                options = this.options;
 
             //Note. Instead of this you can use templating. I did not want to have addition dependencies.
             this.element.addClass(options.strengthWrapperClass);
@@ -97,7 +104,6 @@
                 var total = characters + capitalletters + loweletters + number;
                 that._update_indicator(total);
 
-                var id = that.element[0].id;
                 that._update_info('length', password.length >= 8 && password.length <= 20);
                 that._update_info('capital', capitalletters);
                 that._update_info('number', number);
