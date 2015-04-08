@@ -1,14 +1,14 @@
 {
   "name": "password_strength",
-  "version": "1.0.0",
-  "description": "Simple JQuery plugin which measure of the effectiveness of a password in resisting guessing and brute-force attacks.",
+  "version": "1.0.1",
+  "description": "This JQuery plugin is helping to create strong passwords which could resist guessing and brute-force attacks.",
   "main": "password_strength_meter_widget/widget_strength_meter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkurayan/Password-Strength.git"
+    "url": "https://github.com/mkurayan/password_strength.git"
   },
   "keywords": [
     "password",
@@ -19,7 +19,7 @@
   "author": "Maxim Kurayan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mkurayan/Password-Strength/issues"
+    "url": "https://github.com/mkurayan/password_strength/issues"
   },
-  "homepage": "https://mkurayan.github.io/Password-Strength"
+  "homepage": "https://mkurayan.github.io/password_strength"
 }
