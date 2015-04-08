@@ -7,14 +7,13 @@
 <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="custom_password_strength.css">
 
 <!-- password_strength -->
-<script type="text/javascript" src="password_strength_meter_widget/widget_strength_meter.js"></script>
-<link rel="stylesheet" type="text/css" href="password_strength_meter_widget/widget_strength_meter.css">
+<script type="text/javascript" src="password_strength/password_strength.js"></script>
+<link rel="stylesheet" type="text/css" href="password_strength/password_strength.css">
 
 <script>
-    $(document).ready(function($) { 
+    $(document).ready(function($) {
         $('#myPassword').strength_meter();
 
         $('#mySecondPassword').strength_meter({
