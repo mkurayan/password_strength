@@ -1,15 +1,15 @@
 # Password-Strength
-Simple JQuery plugin which helping to create strong passwords which could resist guessing and brute-force attacks.
+This JQuery plugin helps to create a strong passwords which could resist brute-force attacks.
 
-**Note** This repository contain 2 versions of password_strength plugin.
+**Note** This repository contains two versions of password_strength plugin.
 
-1. password_strength.js Original plugin which implemented as jQuery Widget.
-2. password_strength_lightweight.js This is simple implementation of the password_strength.js plugin, that does not use jQuery Widget Factory.
+1. password_strength.js - Original plugin, implemented as an jQuery Widget.
+2. password_strength_lightweight.js - This is a simple implementation of the password_strength.js plugin which does not use jQuery Widget Factory.
 
-Both versions do the same sings and the have particulary identical code.
+Both versions of the plugin do the same sings and have particularly identical code.
 
-If you a going to extend plugin with addition functionality it will be better to use password_strength.js version because jQuery Widget Factory allows to build complex, stateful plugins based on object-oriented principles.
-If you prefer a lightweight implementation which not use Widget Factory and not depend from jQuery UI you can use password_strength_lightweight.js
+If you are going to extend plugin with an additional functionality it will be better to use original password_strength.js, because jQuery Widget Factory allows to build complex, stateful plugins based on object oriented design principles.
+If you prefer the simpler implementation, which does not use Widget Factory and does not depend from jQuery UI you should use password_strength_lightweight.js
 
 ## How To Use
 

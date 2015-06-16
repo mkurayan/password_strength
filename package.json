@@ -1,7 +1,7 @@
 {
   "name": "password_strength",
-  "version": "1.0.3",
-  "description": "This JQuery plugin is helping to create strong passwords which could resist guessing and brute-force attacks.",
+  "version": "1.0.4",
+  "description": "This JQuery plugin helps to create a strong passwords which could resist brute-force attacks.",
   "main": "password_strength/password_strength.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
